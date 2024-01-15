@@ -1,0 +1,73 @@
+<div class="container">
+   <div class="row mt-5">
+      <h3 class="text-center text-uppercase">LISTADO DE PERSONAS</h3>
+
+      {{#if personas}}
+
+         <div class="col-md-3">
+            <table class="table text-center mx-auto" style="width: 1200px;">
+               <thead>
+                  <tr class="table-dark">
+                     <th>Nombre</th>
+                     <th>Apellido</th>
+                     <th>Edad</th>
+                     <th>Acciones</th>
+                  </tr>
+               </thead>
+               <tbody>
+
+                  {{#each personas}}
+
+                     <tr>
+                        <td>{{name}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{age}}</td>
+
+                        <td>
+
+                           <div class="btn-group">
+
+                              <a
+                                 href="/edit/{{id}}"
+                                 class="btn btn-warning p-2"
+                              ><i class="fa-solid fa-pencil"></i></a>
+
+                              <a
+                                 href="/delete/{{id}}"
+                                 class="btn btn-danger p-2"
+                              ><i class="fa-solid fa-trash"></i></a>
+                           </div>
+
+                        </td>
+                     </tr>
+                  {{/each}}
+               </tbody>
+               <tfoot>
+
+                  <tr class="table-dark">
+
+                     <td colspan="4">REGISTRO DE PERSONAS</td>
+                  </tr>
+               </tfoot>
+            </table>
+         </div>
+
+      {{else}}
+
+         <div class="card text-center mx-auto" style="width: 359px;">
+            <div class="card-header">
+               <h3>Debes crear una persona</h3>
+            </div>
+            <div class="card-body">
+
+               <p>Presiona este boton para que puedas registrar a una persona en
+                  a aplicacion</p>
+
+               <a href="/add" class="btn btn-primary">Ir a crear </a>
+            </div>
+         </div>
+
+      {{/if}}
+
+   </div>
+</div>

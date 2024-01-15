@@ -1,0 +1,22 @@
+{
+   "books": [
+      {
+         "id": 1,
+         "name": "El señor de los anillos",
+         "author": "J. R. R. Tolkien",
+         "year": 1954
+      },
+      {
+         "id": 2,
+         "name": "Harry Potter y la piedra filosofal",
+         "author": "J. K. Rowling",
+         "year": 2001
+      },
+      {
+         "id": 3,
+         "name": "El caballero de la armadura oxidada",
+         "author": "Robert Fisher",
+         "year": 1987
+      }
+   ]
+}
